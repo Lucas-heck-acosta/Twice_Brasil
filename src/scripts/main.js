@@ -1,6 +1,6 @@
 AOS.init();
 
-const eventDate = new Date("Dec 12, 2023 19:00:00");
+const eventDate = new Date("Feb 6, 2024 19:00:00");
 const EventTimeStamp = eventDate.getTime();
 
 const countHours = setInterval(function() {
@@ -27,3 +27,7 @@ const countHours = setInterval(function() {
         document.getElementById('counter').innerHTML = 'Evento expirado'
     }
 }, 1000)
+
+
+
+

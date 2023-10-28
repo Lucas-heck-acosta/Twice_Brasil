@@ -9,7 +9,7 @@
 
     &--primary {
         color: variables.$txtColor;
-        background-color: variables.$purple;
+        background-color: variables.$main;
     }
 
     @media (max-width: 640px) {

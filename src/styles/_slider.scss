@@ -1,0 +1,64 @@
+@use 'variables';
+// referenced from: https://www.youtube.com/watch?v=nAjR0Oj0J8E&ab_channel=CodingwithRobby
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.slider {
+    overflow: hidden;
+    padding: 0px;
+    white-space: nowrap;
+    background-color: variables.$main;
+    margin: -4;
+    position: relative;
+
+    &:hover &__members {
+        animation-play-state: paused;
+    }
+    
+    &::before, &::after {
+        position: absolute;
+        top: 0;
+        width: 40px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+    }
+    &::before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), variables.$main);
+    }
+    &::after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), variables.$main);
+    }
+
+    &__members {
+        display: inline-block;
+        animation: 15s slide infinite linear;
+        margin: -4px;
+        overflow: hidden;
+
+
+        
+
+        &__image
+        {
+            height: 250px;
+            margin: -4;
+            transition: transform 0.3s;
+
+
+            &:hover {
+
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+}
